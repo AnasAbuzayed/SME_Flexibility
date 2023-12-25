@@ -17,7 +17,25 @@ Challenges in achieving a secure electricity supply during extreme weather condi
 - `Results` contains the results for the paper.
 
 # Analysis Reproducing 
-The analysis in this paper are fully reproducable using the `codes` and `data` folders in this repository
+The analysis in this paper are fully reproducable using the `codes` and `data` folders in this repository.
+
+1.  Open your terminal at a location where you want to install the files, clone into the repo using git clone, or using other methods [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+   
+   ```bash
+      .../some/path/without/spaces % git clone https://github.com/AnasAbuzayed/SME_Flexibility.git
+   ```
+   
+2.  Using the terminal, go into `codes` folder, and run `codes/ref_data.py` to retrieve the dataset used in the scripts
+   ```bash
+      cd codes
+      python ref_data.py
+   ```
+
+3.  Each of the scripts generates the figures found in the paper, into `Results` folder
+
+4. The data found in this repo in `data/16/` are after the data cleaning and processing. To reproduce them, you need the data for all the scenarios as explained in the paper. The datasets can be found on Zenodo here: [1](url1), [2](url2), [3](url3).
+   
+5. After retrieving the whole datasets for the scenarios, use each of the scripts to reproduce each of the data outputs as in `data/16/` . For instance, `data/16/16_CO2_Emissions` shows the CO2 emissions from all 129 scenarios. The code `codes/Emissions.py` shows how CO2 emissions for the reference scenario are calculated, you simply need a for loop over all the data from other scenarios to recreate the same file `data/16/16_CO2_Emissions`.
 
 # Results Reproducing 
 The paper's results are fully reproducable using  [MyPyPSA-Ger](https://github.com/AnasAbuzayed/MyPyPSA-Ger) model.
